@@ -28,7 +28,7 @@ $sites = Invoke-RestMethod -Uri $uri `
 #$sites | ConvertTo-Json | Write-Output
 
 $siteData = $sites.data
-$name = $siteData | Where-Object { $_.desc -eq 'Knox-Home' } | Select-Object name
+$name = $siteData | Where-Object { $_.desc -eq 'SITE DESCRIPTION HERE' } | Select-Object name
 
 $uri = "https://IP OR FQDN:8443/api/s/$($name.name)/stat/device"
 $devices = Invoke-RestMethod -Uri $uri `
